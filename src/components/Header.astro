@@ -1,0 +1,60 @@
+---
+// src/components/Header.astro
+---
+
+<header class="sticky top-4 z-50 mx-auto w-[95%] max-w-screen-2xl rounded-2xl bg-white/70 backdrop-blur-md border border-white/40 shadow-sm transition-all duration-300">
+  <div class="px-6 py-4">
+    <div class="flex justify-between items-center relative">
+      
+      <div class="shrink-0 flex items-center">
+        <a href="/" class="text-2xl md:text-3xl font-bold text-dark tracking-tight">
+          CMC <span class="text-primary">Belleza</span>
+        </a>
+      </div>
+      
+      <nav class="hidden md:flex items-center space-x-6 group">
+        <a href="/" class="px-5 py-2 rounded-full text-dark font-medium transition-all duration-300 group-hover:scale-95 group-hover:opacity-50 hover:scale-110! hover:opacity-100! hover:bg-primary/10 hover:text-primary">
+          Inicio
+        </a>
+        <a href="#" class="px-5 py-2 rounded-full text-dark font-medium transition-all duration-300 group-hover:scale-95 group-hover:opacity-50 hover:scale-110! hover:opacity-100! hover:bg-primary/10 hover:text-primary">
+          Categorías
+        </a>
+        <a href="#" class="px-5 py-2 rounded-full text-dark font-medium transition-all duration-300 group-hover:scale-95 group-hover:opacity-50 hover:scale-110! hover:opacity-100! hover:bg-primary/10 hover:text-primary">
+          Contacto
+        </a>
+      </nav>
+
+      <div class="flex items-center space-x-4">
+        <button class="bg-dark text-white p-2.5 rounded-full hover:bg-primary hover:scale-105 transition-all duration-300 shadow-md" aria-label="Ver carrito">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+          </svg>
+        </button>
+
+        <button id="mobile-menu-btn" class="md:hidden text-dark p-2 focus:outline-none hover:text-primary transition-colors" aria-label="Abrir menú">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+
+      <div id="mobile-menu" class="hidden absolute top-full left-0 w-full mt-4 bg-white/90 backdrop-blur-xl border border-white/50 rounded-2xl shadow-xl md:hidden overflow-hidden transition-all duration-300 origin-top">
+        <a href="/" class="block px-6 py-4 text-dark font-medium hover:bg-primary/10 hover:text-primary border-b border-gray-100 transition-colors">Inicio</a>
+        <a href="#" class="block px-6 py-4 text-dark font-medium hover:bg-primary/10 hover:text-primary border-b border-gray-100 transition-colors">Categorías</a>
+        <a href="#" class="block px-6 py-4 text-dark font-medium hover:bg-primary/10 hover:text-primary transition-colors">Contacto</a>
+      </div>
+
+    </div>
+  </div>
+</header>
+
+<script>
+  const btn = document.getElementById('mobile-menu-btn');
+  const menu = document.getElementById('mobile-menu');
+
+  if (btn && menu) {
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+  }
+</script>
