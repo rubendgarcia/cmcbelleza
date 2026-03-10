@@ -12,16 +12,71 @@ const infiniteSlider = [...randomProducts, ...randomProducts, ...randomProducts]
 ---
 
 <BaseLayout title="Inicio - CMC Belleza">
-  <section class="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32 text-center">
-    <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight text-dark mb-6">
-      Potencia tu <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary-hover">Belleza</span> Profesional
-    </h1>
-    <p class="text-xl text-dark-muted mb-10 max-w-2xl mx-auto font-medium">
-      Descubre nuestra selección exclusiva de productos y equipamiento de alta calidad.
-    </p>
-    <a href="/tienda" class="inline-block bg-dark text-white font-semibold px-8 py-4 rounded-full hover:bg-primary hover:scale-105 hover:shadow-lg hover:shadow-primary/30 transition-all duration-300">
-      Explorar Catálogo Completo
-    </a>
+  <section class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-24 flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+
+    <div class="w-full lg:w-1/2 text-center lg:text-left z-10 flex flex-col items-center lg:items-start">
+
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-bold mb-6">
+        <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+        Equipamiento Profesional Premium
+      </div>
+
+      <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-dark mb-6 leading-[1.1]">
+        Eleva tu <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary-hover">Salón</span> al Siguiente Nivel
+      </h1>
+
+      <p class="text-lg md:text-xl text-dark-muted mb-8 max-w-xl font-medium">
+        Herramientas y cosmética de élite para profesionales de la belleza que no se conforman con lo básico. Resultados impecables desde el primer uso.
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+        <a href="/tienda" class="inline-flex justify-center items-center bg-dark text-white font-bold px-8 py-4 rounded-full hover:bg-primary hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/30 transition-all duration-300">
+          Explorar Catálogo
+        </a>
+        <a href="#product-slider" class="inline-flex justify-center items-center bg-white text-dark font-bold px-8 py-4 rounded-full border-2 border-gray-100 hover:border-primary hover:text-primary transition-all duration-300">
+          Ver Novedades
+        </a>
+      </div>
+
+      <div class="mt-12 pt-8 border-t border-gray-100 w-full flex justify-center lg:justify-start gap-8 md:gap-12">
+        <div class="text-left">
+          <p class="text-3xl font-extrabold text-dark">+500</p>
+          <p class="text-sm text-dark-muted font-medium">Productos</p>
+        </div>
+        <div class="text-left">
+          <p class="text-3xl font-extrabold text-dark">24/48h</p>
+          <p class="text-sm text-dark-muted font-medium">Envíos Rápidos</p>
+        </div>
+        <div class="text-left">
+          <p class="text-3xl font-extrabold text-dark text-secondary">100%</p>
+          <p class="text-sm text-dark-muted font-medium">Originales</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="w-full lg:w-1/2 relative z-10 mt-10 lg:mt-0">
+      <div class="relative rounded-[2.5rem] overflow-hidden isolate shadow-2xl border-4 border-white/60 aspect-[4/5] sm:aspect-square lg:aspect-[4/5] transform lg:-rotate-2 hover:rotate-0 transition-transform duration-500">
+        <img
+            src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=800&q=80"
+            alt="Profesional de belleza trabajando en salón"
+            class="w-full h-full object-cover rounded-[2rem] overflow-hidden"
+        />
+
+        <div class="absolute bottom-6 left-6 right-6 sm:bottom-8 sm:left-8 sm:right-auto bg-white/80 backdrop-blur-md border border-white/50 p-4 rounded-2xl flex items-center gap-4 shadow-xl transform translate-y-0 hover:-translate-y-2 transition-transform duration-300">
+          <div class="w-12 h-12 bg-secondary rounded-full flex items-center justify-center shrink-0">
+            <svg class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+          </div>
+          <div>
+            <p class="text-dark font-bold">Calidad Garantizada</p>
+            <p class="text-sm text-dark-muted">Testado por expertos</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="absolute -top-10 -right-10 w-64 h-64 bg-primary/20 rounded-full blur-3xl -z-10"></div>
+      <div class="absolute -bottom-10 -left-10 w-64 h-64 bg-secondary/20 rounded-full blur-3xl -z-10"></div>
+    </div>
+
   </section>
 
   <main class="max-w-7xl mx-auto p-4 md:p-8 overflow-hidden">
